@@ -1,44 +1,92 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React 16.x new features
 
-## Available Scripts
+大 feature 及其 timeline
 
-In the project directory, you can run:
+- (16.0) `Fragments`
+- (16.0) `ErrorBoundary`
+- (16.0) `Portal`
+- (16.3) `Context` API
+- (16.3) Lifecycle Methods
+- (16.6) `React.memo`
+- (16.6) `React.lazy` & `React.Suspence`
+- (16.x/Q1 2019) Hooks
+- (16.x/Q1 2019) Suspense (for data fetching)
 
-### `npm start`
+展开思路：
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- 是个啥
+- 解决了什么问题
+- 采用建议
+- 迁移建议
+- 代码片段
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## 16.0
 
-### `npm test`
+- [x] fragments & strings: no need for a wrapping component
+- [x] error boundary
+- [ ] portal: https://reactjs.org/docs/portals.html - cannot understand
+- [ ] dom attributes - 这是个很细节的东西。用到再看就好了
+  - https://reactjs.org/blog/2017/09/08/dom-attributes-in-react-16.html
+- [ ] architecture rewrite: https://code.fb.com/web/react-16-a-look-inside-an-api-compatible-rewrite-of-our-frontend-ui-library/
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Dom Attributes
 
-### `npm run build`
+- 是个啥：React 15 以前你在 html 里写 React 不认识的属性是会被直接忽略的
+- 解决了什么问题：现在可以写了
+- 采用建议：
+- 迁移建议
+- 代码片段
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 16.3
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- [x] `Context` API - 还是不错的东西
+  - [ ] https://reactjs.org/docs/context.html
+  - [x] https://www.zhihu.com/question/267168180/answer/319754359
+- lifecycle changes:
+  - https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
+  - https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html
+  - [x] https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html#fetching-external-data-when-props-change
+- `StrictMode`: https://reactjs.org/docs/strict-mode.html
+- async rendering:
+  - https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html
+  - https://t.co/3snoahB3uV
+  - pic.twitter.com/egQ988gBjR
+- refs support:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - https://reactjs.org/docs/refs-and-the-dom.html
+  - https://reactjs.org/docs/forwarding-refs.html
 
-### `npm run eject`
+## 16.4
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Pointer events: https://reactjs.org/blog/2018/05/23/react-v-16-4.html
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 16.5
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- profiler: https://reactjs.org/blog/2018/09/10/introducing-the-react-profiler.html
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## 16.6
 
-## Learn More
+- `React.memo`: `PureComponent` for functional components
+- `React.lazy` & `React.suspence`(data fetching with Apollo):
+  - https://reactjs.org/docs/code-splitting.html#reactlazy
+  - https://medium.com/@pomber/lazy-loading-and-preloading-components-in-react-16-6-804de091c82d
+- `contextType`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Roadmap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://reactjs.org/blog/2018/11/27/react-16-roadmap.html
+
+- React 16.6 with Suspense for Code Splitting (already shipped)
+- A minor 16.x release with React Hooks (~Q1 2019)
+- A minor 16.x release with Concurrent Mode (~Q2 2019)
+- A minor 16.x release with Suspense for Data Fetching (~mid 2019)
+
+2019 plans:
+
+- Modernizing React DOM: https://reactjs.org/blog/2018/11/27/react-16-roadmap.html#modernizing-react-dom
+- Suspense for Server Rendering: https://reactjs.org/blog/2018/11/27/react-16-roadmap.html#suspense-for-server-rendering
+
+## Todo
+
+- https://reactjs.org/blog/2018/11/13/react-conf-recap.html
+- https://www.youtube.com/watch?v=nLF0n9SACd4
