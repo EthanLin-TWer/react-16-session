@@ -8,9 +8,12 @@
 - (16.3) `Context` API
 - (16.3) Lifecycle Methods
 - (16.6) `React.memo`
-- (16.6) `React.lazy` & `React.Suspence`
+- (16.6) `React.lazy` & `React.Suspence`(for code splitting)
 - (16.x/Q1 2019) Hooks
-- (16.x/Q1 2019) Suspense (for data fetching)
+- (16.x/Q2 2019) Concurrent Mode
+- (16.x/mid 2019) Suspense(for data fetching)
+- (2019) Modernizing React DOM
+- (2019) Suspense(for Server Side Rendering)
 
 展开思路：
 
